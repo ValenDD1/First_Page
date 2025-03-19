@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--scripts para un mejor visual-->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
+    <script type="module">
+        Prism.highlightAll();
+    </script>
+</head>
+<body>
+    <h1>Pre</h1>
+    <article>
+        La etiqueta "pre" se utiliza, como su propio nombre indica, para crear un 
+        bloque o sección donde aparezca un texto que se formatea
+        con espacios y saltos de linea.
+    </article>
+    
+    <p>ejmeplo de pre</p>
+    <pre
+        style="padding: 1 rem; background-color: aquamarine;"
+    >
+        
+        console.log("hola mundo")
+    </pre>
+    <p>ejmeplo de pre con clase (debes poner el nombre de un lenguaje) </p>
+    <pre>
+        <code class="language-python">
+            print("hola mundo")
+        </code>
+    </pre>
+
+    <p>Librerias para que tu codigo visual sea mas atractivo</p>
+
+    <pre>
+        <code class="language-javascript" >
+            function mensaje(i){
+                console.log(i)
+            }
+        </code>
+    </pre>
+
+    <p>esta libreria es muy util si no quiere poner css uno por uno en todas las palabras</p>
+
+    <p>aunue no solo existe esta libreria ,hay algunos que etare dejando aqui</p>
+
+    <table 
+        style="
+            border: 1px solid black;    
+        "
+    >
+        
+        <thead>
+            <tr>
+                <th>Libreria</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://prismjs.com/">Prismjs</a></td>
+                <td>Libreria de sintaxis de codigo</td>
+            </tr>
+            <tr>
+                <td><a href="https://highlightjs.org/">Highlight</a></td>
+                <td>Librería de resaltado de sintaxis.</td>
+            </tr>
+            <tr>
+                <td><a href="https://shiki.matsu.io/">Shiki</a></td>
+                <td>Resaltado de sintaxis al estilo de VSCode.</td>
+            </tr>
+        </tbody>
+    </table>
+        
+
+
+
+</body>
+</html>

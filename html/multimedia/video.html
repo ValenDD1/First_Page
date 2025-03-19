@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .td-p{
+            color: blue;
+            font-size: 15;
+            font-style: italic;
+            
+        }
+        td,th{
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video</h1>
+    <p>En HTML5 se introduce la interesante posibilidad de mostrar videos directamente desde nuestro navegador. De hecho, si arrastramos un video a la ventana del navegador, comprobaremos que comienza a reproducirse en él. Esto ocurre porque los navegadores son capaces de mostrar imágenes, reproducir video y audio.</p>
+
+    <p>ejemplo</p>
+    <video 
+        src="/images/prueba.mp4" 
+        width="400"
+        
+    ></video>
+
+    <p>si bien solo se meustra como una imagen ,hay atributos que debemos saber</p>
+
+    <table
+        style="
+            border:  1px black solid;
+
+        "
+    >
+        <thead>
+            <tr>
+                <th>atributo</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="td-p">autoplay</td>
+                <td>Comienza a reproducir el video automáticamente. OJO, está sujeto a normas del navegador.</td>
+            </tr>
+            <tr>
+                <td class="td-p">muted</td>
+                <td>lo pone en silencio</td>
+            </tr>
+            <tr>
+                <td class="td-p">controls</td>
+                <td>pone los controles,que por defecto no estan</td>
+            </tr>
+            <tr>
+                <td class="td-p">playsinline</td>
+                <td>reproduce el video en linea,es decir en su area de reproduccion</td>
+            </tr>
+        </tbody>
+
+        
+
+
+    </table>
+
+    <p>ahora sabiendo esto,podemos hacer un video mas personlizable</p>
+
+    <video src="/images/prueba.mp4" autoplay controls loop muted width="400" ></video>
+   
+
+    <p>atributos de precarga</p>
+
+    <section>
+        tenemos al poster y el preload
+        <div>
+            <h4>poster</h4>
+            <p>Por defecto, las etiquetas video muestran el fotograma inicial del video enlazado, ya sea un fotograma del mismo o una pantalla negra inicial. Sin embargo, podemos mostrar una imagen personalizada a modo de «carátula» como lo hace, por ejemplo Youtube, de modo que el video no se llega a mostrar hasta que el usuario pulsa en el botón de play.</p>
+            <video src="/images/prueba.mp4" poster="/images/naruto.jpg" width="300" controls></video>
+
+        </div>
+        <div>
+            <h4>preload</h4>
+            <p>Mediante el atributo preload podemos indicar al navegador como queremos que se comporte respecto a los elementos de video. Por defecto, el navegador tiene el valor auto en este atributo, por lo que decidirá si es necesario descargarlo o no, pero podemos utilizar los valores none o metadata para cambiar este comportamiento:</p>
+            <ol type="a">
+                <li>auto:Valor por defecto. EL navegador decide si debe descargar el video de forma anticipada o no.</li>
+                <li>none:Se le indica al navegador que no descargue el video hasta que se pulse el botón de play.</li>
+                <li>metadata:Se le indica al navegador que descargue los metadatos del video, pero no el video en sí.</li>
+            </ol> 
+            <video src="/images/prueba.mp4" preload="metadata" width="300" autoplay></video>
+        </div>
+    </section>
+
+    <p>pero no solo se puede hacer eso  </p>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        IMG
+    </h1>
+
+    <p>
+        Un tipo de recurso muy frecuente en nuestras páginas son las imágenes. Las imágenes son importantísimas para conseguir que nuestra página se vea bien y sea agradable (si son imágenes de decoración) o ayude a mostrar y ejemplificar lo que escribimos en ella (si son imágenes de contenido).
+    </p>
+
+    <!--ejemplo de una imagen-->
+    <figure>
+        <img 
+            src="https://imgs.search.brave.com/4AJTcuCUCJ8c2MLexkcHwzyoMA8KhxjseW0csNNgxm0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbTEu/YW1pbm9hcHBzLmNv/bS82MzExL2NmZjlh/OTJiMWIwOGQxYWQ5/OTY0ZTYwNmZjYTZj/MGNkYTE4Mzc5Nzlf/aHEuanBn" 
+            width="500"
+            height="300" 
+            alt="imagen de dark-vadder"
+            loading="lazy"
+        >
+        <figcaption>Imagen de Dark Vadder</figcaption>
+    </figure>
+
+    <p>Tambien existen atributos de rendimiento</p>
+
+    <ol type="a"  >
+        <li>Loading</li>
+        <li>decoding</li>
+        <li>fetchpriority</li>
+    </ol>
+
+    <div>
+        <section>
+            <h3>Loading</h3>
+            <p>Indica si el navegador debe descargar inmediatamente la imagen o posponer la descarga.</p>
+            <ul>
+                <li>eager:Valor por defecto. El navegador descarga inmediatamente la imagen.</li>
+                <li>lazy:El navegador pospone la descarga de este recurso hasta que sea necesario.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>fetchpriority</h3>
+            <p>Mediante el atributo fetchpriority podemos establecer la prioridad con la que se descargará la imagen.</p>
+            <ul>
+                <li>auto:Valor por defecto.</li>
+                <li>high:Prioridad alta</li>
+                <li>low:Prioridad baja</li>
+            </ul>
+        </section>
+        <section>
+            <h3>decoding</h3>
+            <p>Indica si la imagen debe ser decodificada inmediatamente o posponer la descarga.</p>
+            <ul>
+                <li>auto:Valor por defecto. .</li>
+                <li>sync:El navegador se centrará en decodificar esta imagen antes de pasar a otras.</li>
+                <li>async:El navegador se centrará en decodificar otras imágenes antes de esta</li>
+                
+            </ul>
+        </section>
+    </div>
+
+    <p>Múltiples imágenes</p>
+    <p>Un recurso puede tener varias imagenes</p>
+    <ul>
+        <li>srcset:Indica un conjunto de imágenes y cargará una cuando se cumplan ciertos criterios.</li>
+        <li>sizes:Indica un conjunto de condiciones de medios para aplicar al srcset.</li>
+        <li></li>
+    </ul>
+    <section>
+        <h4>srcset</h4>
+        <ul>
+            <li>Ancho:Ancho de pantalla en píxeles, seguido de la letra w (400w,etc) </li>
+            <li>Densidad:Densidad de píxeles con decimales, seguido de la letra x (3x,etc) </li>
+        </ul>
+        ejemplo
+        <img 
+            src="/images/perrito_400w.jpg" 
+            alt="perrito peshosho" 
+            srcset="/images/perrito_400w.jpg 400w, /images/locura_200w.png 200w"
+            width="400"
+        >
+
+    </section>
+    <section>
+        <h4>sizes</h4>
+        <p>
+            Indica el tamaño de la imagen segun el ancho de la pantalla
+        </p>
+        ejemplo
+        <img 
+            src="/images/perrito_400w.jpg" 
+            alt="perrito peshosho" 
+            sizes="
+                (max-width: 400px) 200px,
+                (max-width: 800px) 400px,
+            "
+            srcset="/images/perrito_400w.jpg 400w, /images/locura_200w.png 200w"
+            
+        >
+    </section>
+
+
+
+
+</body>
+</html>

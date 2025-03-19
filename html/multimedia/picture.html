@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Picture</h1>
+    <p>
+        Esta nueva etiqueta nos permitirá mostrar imágenes dependiendo de nuestras necesidades.
+    </p>
+
+    <p>ejemplo</p>
+    <p>
+        si bien en este ejemplo no se ve mucho la diferencia,al verlo con f12,podemos darnos cuenta que se trata de una condicional,si la imagen .avif es soportada en el navegador , se mostrara la imagen .avif,de lo contrario se mostrara la imagen y si no lo puede soportar agarra la otra y asi hasta que encuentre que la imagen sea soportada
+    </p>
+    <picture>
+        <source srcset="/images/perrito_400w.avif" >
+        <source srcset="/images/perrito_400w.webp" >
+        <img src="/images/perrito_400w.jpg" alt="foto de perrito">
+    </picture>
+
+    <p>Tambien podemo hacerlo responsivo (f12)</p>
+
+    <picture>
+        <source media="(width>=900px)" srcset="/images/goku.jpg" >
+        <source media="(width<600px)" srcset="/images/naruto.jpg"  >
+        <img src="/images/luffy.jpg" alt="luffy feliz">
+    </picture>
+
+    <p>cuando la pantalla sea myor o igual a 900px ,este cambiara a goku,cuando sea menor a 600px ,cambiara a naruto,y cuando este en medio ,estara por default(luffy)</p>
+</body>
+</html>
