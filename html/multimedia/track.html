@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Track</h1>
+        <p>
+            track e una etiqueta que sirve para poder mostrar subtitulos de un video,el track e debe almacenar en la etiqueta video(etiqueta mutimedia contenedora)
+            obviamente debemo dar la ruta de nuetro archivo <b>.vtt</b> en el src de nuestro track
+            
+        </p>
+
+        <p>ejemplo</p>
+        <Video width="300" controls  >
+            <source src="/videos/friday.mp4">
+            <track src="/videos/friday.vtt" default  >
+        </Video>
+        <p>
+            hay varias etiquetas que puedes usar
+        </p>
+        <ul style="list-style: none;" >
+            <li>
+                <details>
+                    <summary>src y srclang</summary>
+                    <div>
+                        <p>En primer lugar, la etiqueta <b>track</b> debe de incluir un atributo src para indicar donde está nuestro fichero de subtítulos con extensión .vtt. Este atributo es obligatorio. Además, es conveniente establecer también el atributo srclang, mediante el cuál indicaremos el idioma en el que está dicho archivo de subtítulos.</p>
+                        <video 
+                            src="/videos/friday.mp4" 
+                            controls 
+                            width="200">
+                            <!--aqui vemos la funcionalidad de src y srclang-->
+                            <track src="/videos/friday.vtt" srclang="es" >
+
+                        </video>
+
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>label y default</summary>
+                    <div>
+                        <p>Si tenemos varias etiquetas <b>track</b> en un mismo archivo de video o audio, podemos darle la opción al usuario para que elija entre múltiples subtítulos. Para ello, el usuario debe ir al botón CC de los controles del video o audio y seleccionar el subtítulo que le interese.
+
+                            Es posible indicar con un atributo label en la etiqueta <b>track</b> el texto que se mostrará en el menú de opciones del botón CC.
+                            
+                            Observa el siguiente ejemplo con 3 subtítulos diferentes:</p>
+                        <video 
+                            src="/videos/friday.mp4" 
+                            controls 
+                            width="200">
+                            <!--aqui vemos la funcionalidad de label y default-->
+                            <track 
+                                src="/videos/friday.vtt" 
+                                srclang="es"
+                                default
+                                label="Español"
+                            >
+
+                        </video>
+
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Kind</summary>
+                    <div>
+                        <p>Además, de forma adicional, también podemos indicar el atributo kind para dotar de metadatos o semántica a la etiqueta track. Con este atributo podemos establecer la naturaleza de los subtítulos, indicando si se trata de subtitulos, información, capítulos, etc...</p>
+                        <video 
+                            src="/videos/friday.mp4" 
+                            controls 
+                            width="200">
+                            <!--aqui vemos la funcionalidad de label y default-->
+                            <track 
+                                src="/videos/friday.vtt" 
+                                srclang="es"
+                                default
+                                label="Español"
+                                kind="chapters"
+                            >
+
+                        </video>
+
+                    </div>
+                </details>
+            </li>
+
+        </ul>
+
+
+    </div>
+</body>
+</html>

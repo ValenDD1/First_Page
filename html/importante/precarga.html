@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--precarga-->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!--
+        Antes de cargar un enlace con un recurso, ya sea una imagen, un fichero css, html o de cualquier otro tipo, 
+        el navegador debe resolver las DNS. Básicamente es un proceso que debe hacer al principio de cada recurso que esté alojado en un dominio desconocido, 
+        para conocer la IP que está detrás de ese dominio y por lo tanto poderse comunicar de forma más rápida y efectiva.
+    -->
+    <link rel="dns-prefetch" href="https://fonts.google.com/">
+    <!--
+    Cada vez que el navegador tiene que realizar la carga de un recurso, por cada dominio debe realizar varias tareas:
+
+        Búsqueda y resolución de DNS
+        Negociación TCP (Handshake)
+        Negociación TLS (Opcional)
+    Estas tareas se pueden realizar de forma anticipada para ganar algún tiempo y aprovecharlo en otras tareas.
+    -->
+    <link rel="preconnect" href="https://cdnjs.com/">
+
+    <!--prerender: realiza un renderizado previo-->
+    <link rel="prerender" href="https://manz.dev/streams">
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    renderizar una pagina
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Etiqueta audio</h1>
+        <article>
+            La etiqueta audio se utiliza para insertar 
+            un audio en una página web.
+        </article>
+        <audio src="/images/prueba.mp4" controls  ></audio>
+        <article>
+            <p>
+                sabemos que tambien tiene las mismas propiedades que la etiqueta video
+            </p>
+        
+        <audio src="/images/A Sky Full of Stars_256k.mp3" controls loop muted></audio>
+            <p>
+                tambien manipular el tiempo 
+            </p>
+            <audio src="/images/A Sky Full of Stars_256k.mp3#t=30,50" controls></audio>
+            <p>
+                descargar el audio
+
+            </p>
+            <audio src="/images/A Sky Full of Stars_256k.mp3" controls preload="none" ></audio>
+
+            <p>tambien la etiqueta audio sirve como contenedor </p>
+
+            <audio controls >
+                <source src="pepe.opus" >
+                <source src="audio.ogg" >
+                <source src="/images/A Sky Full of Stars_256k.mp3">
+            </audio>
+
+        </article>
+
+    </div>    
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><marquee behavior="" direction="left">IFRAME</marquee></h1>
+
+    <div>
+        <p>
+            una etiqueta de marcos flotantes que sigue siendo útil hoy en día para incrustar contenido externo en una página
+        </p>
+        <iframe      
+            src="https://www.youtube.com/embed/Imeq3GeRttw"
+            frameborder="0"
+            width="300"
+            height="400"
+        >
+        </iframe>
+
+        <p>y tambien como no es de esperar,tenemos atributos</p>
+        <ul style="list-style: none;" >
+            <li>
+                <details>
+                    <summary>name</summary>
+                    <div>
+                        <p>sirve para darle un nombre al marco y cargar direcciones URL diferentes a trave de la etiqueta a ,haciendo referecnia al marco a traves del atributo target </p>
+                        <section>
+                            <a target="video" href="https://www.google.com/">buscar en el navegador</a>
+                            
+                            <iframe 
+                                name="video"
+                                src="https://www.youtube.com/embed/Imeq3GeRttw" 
+                                frameborder="0"
+                                width="400"
+                                >
+                            </iframe>
+                        </section>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>srcdoc</summary>
+                    
+                    <div>
+                        <p>nos permite indicar directamente el código fuente del iframe en su valor, algo que puede ser interesante para crear contenido autogenerado a demanda</p>
+                        <section>
+                            <iframe 
+                                src="https://www.youtube.com/embed/Imeq3GeRttw"
+                                srcdoc=" <p> hola mundo </p>" ></iframe>
+                        </section>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>alllowfullscreen</summary>
+                    <div>
+                        <p>
+                            Es posible indicar el atributo allowfullscreen en nuestra etiqueta iframe. De esta forma, se le indica al navegador que se permite la posibilidad de llamar a la función Javascript requestFullscreen(), o lo que es lo mismo, la posibilidad de poner el video a pantalla completa.
+                        </p>
+                        <iframe 
+                            src="https://www.youtube.com/embed/Imeq3GeRttw" 
+                            frameborder="0" 
+                            allowfullscreen 
+                        ></iframe>
+                        <p>al darle click al video y darle a pantalla completa se podra</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>loading</summary>
+                    <div>
+                        <p>Al igual que con las imágenes, algunos navegadores soportan el uso del atributo loading para hacer lazy load del contenido del iframe. Un iframe, al cargar contenido externo, puede repercutir negativamente en el rendimiento y velocidad de carga de la página, puesto que puede necesitar cargar una gran cantidad de recursos.</p>
+                        <ol>
+                            <li>eager:Valor por defecto. El navegador descarga inmediatamente los recursos del iframe.</li>
+
+                            <li>lazy:El navegador pospone la descarga de estos recursos hasta que sea necesario.</li>
+
+                        </ol>
+                    </div>
+                </details>
+            </li>
+        </ul>
+
+        <h3>etiquetas externas (legacy) </h3>
+        <p>
+            Al margen de los iframe, existen otras etiquetas para utilizar contenido externo 
+            en una web. Sin embargo, siguen permaneciendo por motivos históricos y de 
+            compatibilidad, ya que actualmente no se utilizan demasiado,pero servian antes para poner contenido flash
+        </p>
+        <ul>
+            <li>embed</li>
+            <li>object</li>
+            <li>param</li>
+        </ul>
+    </div>
+</body>
+</html>
