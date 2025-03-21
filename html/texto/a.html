@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>la etiqueta a</p>
+    <p>es una etiqueta para enlazar recursos para que el usuario pueda navegar de punto a otro punto,es una etiqueta escencial de html 5 y debes saber usarla</p>
+    <p>en este punto ya uno sabe para que y como funciona,dire alguno atributo que no sabias </p>
+    <ul>
+        <li>href:Enlace a la página, documento o recurso que se quiere enlazar. Atributo obligatorio.</li>
+        <li> hreflang:Establece un código ISO 639-1 del idioma del recurso enlazado en el atributo href. </li>
+        <li>download:Establece el nombre del archivo a descargar.  </li>
+        <li>
+            target:Establece la ventana en la que se abre el recurso enlazado.
+            <ol>
+                <li>_blank:Abre el recurso en una nueva ventana.</li>
+                <li>_self:Abre el recurso en la misma ventana.</li>
+                <li>_parent:Abre el recurso en la ventana padre.</li>
+                <li>_top:Abre el recurso en la ventana principal.</li>
+                <li>frame:Abre el recurso en un marco.</li>
+            </ol>
+
+        </li>
+        <li>ping:Notifica a un recurso o enlace concreto que el usuario ha seguido el enlace.
+        </li>
+        <li>
+            rel:Tipo de relación del enlace 
+            <ol>
+                <li>alternate:Indica que el recurso enlazado es una alternativa al recurso principal.</li>
+                <li>author:Indica que el recurso enlazado es el autor del recurso principal.</li>
+                <li>bookmark:Indica que el recurso enlazado es un marcador de navegación.</li>
+                <li>help:Indica que el recurso enlazado es una ayuda.</li>
+                <li>license:Indica que el recurso enlazado es una licencia.</li>
+                <li>next:Indica que el recurso enlazado es el siguiente recurso.</li>
+                <li>prev:Indica que el recurso enlazado es el recurso anterior.</li>
+                <li>search:Indica que el recurso enlazado es una pista de búsqueda.</li>
+                <li>tag:Indica que el recurso enlazado es una etiqueta.</li>
+                <li>external:Indica que el recurso enlazado es externo.</li>
+                <li>nofollow:Indica que el recurso enlazado no debe ser seguido por el navegador.</li>
+                <li>noopener:Indica que el recurso enlazado debe ser abierto en una ventana nueva.</li>
+                <li>noreferrer:Indica que el recurso enlazado debe ser abierto sin referencias.</li>
+                <li>prefetch:Indica que el recurso enlazado debe ser descargado de forma anticipada.</li>
+            </ol>
+        </li>
+        <li>type:Pista para el navegador sobre el tipo de recurso enlazado. Atributo no obligatorio.</li>
+    </ul>
+
+    ejemplo:
+    <a 
+        href="/images/goku.jpg"
+        type="image/png"   
+        target="_blank"
+        rel="noopener noreferrer"
+        ping="https://www.google.com"
+        download
+        >enlace con lo antes mencionado</a>
+</body>
+</html>
