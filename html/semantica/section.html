@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>la etiqueta section</h1>
+    <p>
+        Mediante la etiqueta <section> es posible crear apartados para una web, de modo que las mantenemos separadas. Muchas veces no suele estar clara que etiqueta utilizar, así que vamos a simplificar y generalizar los pasos:
+    </p>
+    <ul>
+        <li>Si sólo queremos dar estilo o separar una sección genérica, usaremos un div</li>
+        <li> Si tenemos algo dividido en varios apartados, usaremos section para cada uno de ellos. </li>
+        <li> Si dicha sección es una parte muy importante de esa URL, usa article en lugar de section </li>
+    </ul>
+
+    Ejemplos (F12):
+
+    <div class="temas" style="border: 2px hotpink solid;" >
+        <section class="tema1">
+            <h1>info</h1>
+            <p>...</p>
+        </section>
+        <section class="tema2">
+            <h1>info</h1>
+            <p>...</p>
+        </section>
+        <section class="tema3">
+            <h1>info</h1>
+            <p>...</p>
+        </section>
+    </div>
+    <br>
+    
+    <h1>main</h1>
+    <p>
+        es una etiqueta de agrupación general que debe utilizarse 
+        para representar el contenido dominante y principal del 
+        documento. De forma habitual, esta etiqueta suele ser 
+        elemento hijo de etiquetas como body, div, form o 
+        webcomponents.
+        <strong>hidden</strong>
+        sólo debería aparecer una vez por página, sin embargo, puede darse la posibilidad de que aparezca varias veces en un mismo documento si todas contienen el atributo hidden, salvo una. El atributo hidden es un atributo global que se puede utilizar en cualquier etiqueta, sin embargo, en esta etiqueta es bastante frecuente usarlo si 
+        tenemos la necesidad de incluir múltiples etiquetas main.
+    </p>
+
+
+    ejemplos:
+    <div style="border: 2px hotpink solid ;">
+        <header class="cabezilla" >
+            <h1 style="text-align: center; color: red;" ><u>titulo del tema</u></h1>
+            <p>...</p>
+        </header>
+        <main class="principal" >
+            <p>content</p>
+            <p>....</p>
+            <section>
+                <h2>titulo del tema secundario</h2>
+                <p>....</p>
+            </section>
+        </main>
+        <footer class="pie" style="color: blue;" >
+            <p>....</p>
+            <p>&copy tema 2025</p>
+        </footer>
+    </div>
+
+    con hidden
+
+    <div 
+        class="page" 
+        style="border: 2px greenyellow solid;"
+    >
+        <header>
+            <h1>tema con hidden</h1>
+        </header>
+        <nav>
+            <a href="#">Archivo de posts</a>
+            <a href="#">Comentarios</a>
+        </nav>
+        <main>
+            <h2>Archivo de posts</h2>
+            <p>Contenido principal...</p>
+        </main>
+        <main hidden>
+            <h2>Comentarios</h2>
+            <p>Contenido principal...</p>
+        </main>
+        <main hidden>
+            <h2>Streams anteriores</h2>
+            <p>Contenido principal...</p>
+        </main>
+        <footer>
+            <p>Escrito por dev</p>
+        </footer>
+    </div>
+
+</body>
+</html>
