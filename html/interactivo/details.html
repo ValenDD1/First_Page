@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const details = document.querySelector("details");
+        details.addEventListener("toggle", (event) => {
+        if (details.open) {
+            alert("the element was toggled open");
+        } else {
+            alert("the element was toggled closed");   
+        }
+        });
+    </script>
+    <style>
+        .acordeon-css[open]::details-content{
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+        .flecha-personalizada summary::marker {
+            content: "👉";
+        }
+        .flecha-personalizada[open] summary::marker {
+            content: "👇";
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>details</h1>
+
+    <p>
+        El llamado Acordeón HTML, elemento desplegable o colapsable es un elemento que muestra un texto, forma o icono identificativo que el usuario puede pulsar para desplegar más información, que por defecto está oculta y contraída.
+    </p>
+    <ul>
+        <li>details:Etiqueta contenedora de todo el acordeón o elemento desplegable.</li>
+        <li>summary:Título pulsable del acordeón. Aparece siempre, se encuentre desplegado o no.</li>
+    </ul>
+
+
+    ejemplos:
+    <br>
+    <details id="details">
+        <summary>ejemplo 2</summary>
+        <div>
+            <h5>hola soy un acordeon</h5>
+            <p>me pueden abrir al darle click a la flechita</p>
+        </div>
+    </details>
+    <br>
+    <details>
+        <summary>mas informacion</summary>
+        <img src="/images/luffy.jpg" width="200" alt="luffy">
+        <p>el es luffy de one piece</p>
+    </details>
+    <br>
+    
+    <p style="color: brown;" >¿open o toggle?</p>
+    <p>
+        podemos poner el <strong>open</strong> para que se abra por defecto,es un atriibuto que tiene solamente la etiqueta details
+    </p>
+
+    ejemplos:
+    <details open>
+        <summary>ejemplo 1</summary>
+        <div>
+            <h1>hola soy un acordeon</h1>
+            <p>me pueden abrir al darle click a la flechita</p>
+        </div>
+    </details>
+
+    <br>
+
+    <p>podemos ponerle css a nuestra informcaion de details con css </p>
+    <p>el pseudoelemento en css es ::details-content,nos permitira estilar nuestro contenido dentro de nuestro details</p>
+    <p>ojo:debe estar con details[open],para que le css no se salga abajo</p>
+
+    <br>
+    <details class="acordeon-css" >
+        <summary>ahora con css</summary>
+        <img src="/images/luffy.jpg" width="200" alt="luffy">
+        <p>el es luffy de one piece</p>
+    </details>
+    <br>
+    <p style="color: brown;" >acordeon exclusivo,name</p>
+    <p>Es posible crear un acordeón exclusivo con HTML. Este es el nombre que se le da a una serie de acordeones HTML donde sólo se permite tener desplegado a uno sólo. La forma de conseguir es simplemente añadir a todos los acordeones el atributo name con el mismo nombre.</p>
+
+    ejemplos
+    <br>
+    <details name="acordeon">
+        <summary>ejemplo 1</summary>
+        <div>
+            <h1>hola soy un acordeon</h1>
+            <p>me pueden abrir al darle click a la flechita</p>
+        </div>
+    </details>
+    <details name="acordeon">
+        <summary>ejemplo 2</summary>
+        <div>
+            <h1>hola soy un acordeon</h1>
+            <p>me pueden abrir al darle click a la flechita</p>
+        </div>
+    </details>
+    <details name="acordeon">
+        <summary>ejemplo 3</summary>
+        <div>
+            <h1>hola soy un acordeon</h1>
+            <p>me pueden abrir al darle click a la flechita</p>
+        </div>
+    </details>
+    
+    <p style="color: brown;"> personaliza la flecha </p>
+
+    <p>
+        Por defecto, los navegadores suelen identificar el desplegable mediante una flecha hacia la derecha o hacia abajo, dependiendo de si el desplegable está colapsado o desplegado, respectivamente.
+        Mediante CSS, podemos cambiar este comportamiento, haciendo uso del pseudoelemento ::marker sobre la etiqueta summary
+    </p>
+
+    ejemplos:
+    <br>
+    <details
+        class="flecha-personalizada"
+    >
+        <summary>dale click</summary>
+        <div>
+            <p>ahora puedes ver el cambio de la flecha</p>
+        </div>
+    </details>
+    
+    <!--reutiliza esto en los otros ejemplos-->
+    <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+    <details class="aprender-mas" >
+        <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de details</summary>
+        <nav style=" text-align: center; font-size: 17px;" >
+            <a href="https://lenguajehtml.com/html/interactivas/etiqueta-html-details/">details con Manzdev</a>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details con mozilla</a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=daABK79uZvI">details en 2min</a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=idoaw75xjhU">css con details avanzado-deber saber css para entender el video </a>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary con mozilla</a>
+        </nav>
+    </details>
+</body>
+</html>

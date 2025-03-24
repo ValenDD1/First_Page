@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal {
+            opacity: 0;
+            transition:
+            display 1s allow-discrete,
+            overlay 1s allow-discrete,
+            translate 1s,
+            opacity 1s;
+            translate: 0 50%;
+            will-change: translate, opacity;
+        }
+
+        #modal[open] {
+            opacity: 1;
+            translate: 0;
+            @starting-style {
+                opacity: 0;
+                translate: 0 50%;
+            }
+        }
+
+        #modal::backdrop {
+            background: linear-gradient(#000d, #000a);
+            opacity: 1;
+            transition:
+            display 1s allow-discrete,
+            opacity 1s;
+
+            @starting-style { opacity: 0 }
+        }
+
+        #modal:not([open])::backdrop {
+            opacity: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: darkturquoise;" >Dialog</h1>
+        <p>
+            un dialogo es lo que podemos decir a una ventana de dialogo.
+            Dichas ventanas pueden contener toda la información HTML que queramos: texto, imágenes, botones, video o cualquier otra cosa, y ser personalizada mediante CSS
+        </p>
+    </header>
+    <main>
+
+        <section class="ejemplos">
+            <h3>Ejemplos simples de dialog</h3>
+            <div>
+                <dialog open>
+                    <b>Bienvenido a mi primer dialogo</b>
+                    <p>aqui encontraras informacion..</p>
+                </dialog>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div>
+                <dialog open>
+                    <img src="/images/naruto.jpg" width="100" alt="naruto">
+                    <p>el es naruto,de naruto :b</p>
+                </dialog>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            
+
+        </section>
+
+        <section class="ejemplos" >
+            <h3>ejemplos de como cerrar un dialog</h3>
+            <div>
+                <dialog open closeby="none" >
+                    <h3>me puedes cerrar</h3>
+                    <p>hay un boton abajo ,dale click y podras cerrar este dialogo..</p>
+                    <form method="dialog">
+                        <button>cerrar dialog</button>
+                    </form>
+                </dialog>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div>
+                <dialog open id="alert-dialog" >
+                    <h3>me puedes cerrar,pero con js</h3>
+                    <p>se puede cerrar con un poco de js</p>
+                    <button onclick="this.parentElement.close()" >cerrar con js</button>
+                </dialog>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div>
+                <dialog id="alert-dialog2">
+                    <h3>me abristes con el boton y un poco de js,increible,ahora cierrame..</h3>
+                    <button onclick="this.parentElement.close()">cerrar</button>
+                </dialog>
+                <button id="show-button">
+                    Abrir dialogo
+                </button>
+            </div>
+        </section>
+
+        <section class="ejemplos" > 
+            <h3>ahora haremos un modal,usando js y css ,hay propiedades con css para poder estilar un dialogo o modal</h3>
+            <ul>
+                <li>:open : Da estilo a la ventana de diálogo que está abierta</li>
+                <li>:closed : Da estilo a la ventana de diálogo que está oculta</li>
+                <li>::backdrop : Da estilo al fondo de la página cuando el diálogo está abierto.</li>
+            </ul>
+
+            <button onClick="this.nextElementSibling.showModal()" >
+                abrir modal
+            </button>
+            <dialog id="modal" >
+                <h3>Goku te saluda,espero tengas un buen dia</h3>
+                <img src="/images/goku.jpg" width="100" alt="">
+                <br>
+                <form method="dialog">
+                    <button>cerrar</button>
+                </form>
+            </dialog>
+            
+
+        </section>
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+            <details class="aprender-mas" >
+                <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de dialog</summary>
+                <nav style=" text-align: center; font-size: 17px;" >
+                    <a href="https://lenguajehtml.com/html/interactivas/etiqueta-html-dialog/">dialog con Manzdev</a>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog con mozilla</a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=c-68E02ViOY">dialog en 3min</a>
+                </nav>
+            </details>
+    </footer>
+    <script src="/js/dialog.js"></script>
+</body>
+
+</html>

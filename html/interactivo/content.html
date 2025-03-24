@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>el atributo contenteditable</h1>
+    <p>
+        dar al usuario la capacidad de editar su contenido de texto
+    </p>
+
+    <p style="color: red;" > 
+        ejemplos
+    </p>
+    <section contenteditable="true" >
+        <p>Este contenido es editable</p>
+    </section>
+    <ul>
+        <li>textplane-only :sirve para que el text solo se pueda editar con texto y no con etiquetas html </li>
+        <li>designMode: sirve para poner el documento en modo de diseño</li>
+    </ul>
+
+    <button id="boton-design" >
+        Cambiar a modo de diseño?
+    </button>
+    
+    
+    <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+    <details class="aprender-mas" >
+        <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de contenteditable</summary>
+        <nav style=" text-align: center; font-size: 17px;" >
+            <a href="https://lenguajehtml.com/html/interactivas/atributo-contenteditable/">contenteditable con Manzdev</a>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable con mozilla</a>
+            <br>
+            <a href="https://www.youtube.com/results?search_query=contenteditable+html">contenteditable en youtube </a>
+            <br>
+        </nav>
+    </details>
+    
+
+    <script>
+
+        const diseño=document.querySelector("#boton-design");
+        diseño.addEventListener("click",function(){
+            if (document.designMode === "off") {
+                document.designMode = "on";
+                diseño.textContent = "Desactivar modo de diseño";
+            } else {
+                document.designMode = "off";
+                diseño.textContent = "Activar modo de diseño";
+            }
+        });
+
+        
+    </script>
+
+</body>
+</html>
