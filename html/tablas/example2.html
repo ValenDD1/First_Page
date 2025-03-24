@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>tablas con celdas irregulares </h1>
+
+    <p>
+        HTML nos permite crear tablas un poco más complejas, donde queremos crear celdas irregulares que ocupan más o menos espacio en la tabla.
+    </p>
+
+    <ul>
+        <li>
+            <strong>th</strong>
+            <p>sirve para crear celdas que funcionan como cabeceras de la columna de la tabla. Por defecto, esta celda es una celda normal, algo más destacada visualmente sobre el resto, para que el usuario entienda la naturaleza de los datos que encontrará en esa columna.</p>
+            <ol>
+                atributos:
+                <li>
+                    scope: Indica a que celdas se aplica la cabecera
+                    <ul>
+                        <li>row: La cabecera se aplica a alguna de las filas adyacentes</li>
+                        <li>col: La cabecera se aplica a alguna de las columnas adyacentes</li>
+                        <li>rowgroup: La cabecera se aplica a todas las celdas restantes de la fila</li>
+                        <li>colgroup: La cabecera se aplica a todas las celdas restantes de la columna</li>
+                        <li>auto: La cabecera se aplica a las celdas de forma automática</li>
+                    </ul>
+                </li>
+                <li>
+                    abbr: Abreviatura o información alternativa sobre la cabecera
+                </li>
+            </ol>
+        </li>
+        <li>
+            <strong>td</strong>
+            <p>sirve para crear celdas que ocupan menos espacio en la tabla</p>
+            <ol>
+                atributos:
+                <li>colspan: Número de columnas que la celda abarcará.</li>
+                <li>rowspan: Número de filas que la celda abarcará.</li>
+                <li>headers: Id de los elementos th con los que tiene relación la celda.</li>
+            </ol>
+        </li>
+    </ul>
+
+    ejemplos:
+    <table>
+        <caption>tabla por defecto</caption>
+        <tr>
+            <th >columna1</th>
+            <th>columna2</th>
+            <th>columna3</th>
+        </tr>
+        <tr >
+            <td abbr="datox"  >dato1</td>
+            <td>dato2</td>
+            <td>dato3</td>
+        </tr>
+        <tr>
+            <td>dato1</td>
+            <td>dato2</td>
+            <td>dato3</td>
+        </tr>
+        <tr>
+            <td>dato1</td>
+            <td>dato2</td>
+            <td>dato3</td>
+        </tr>
+
+
+    </table>
+
+    
+    <br>
+
+    <table>
+        <caption>tabla usando los atributos scope </caption>
+        <tr>
+            <th>Animal</th>
+            <th>Característica principal</th>
+            <th>Probabilidad de dominar el mundo</th>
+        </tr>
+        <tr>
+            <th scope="rowgroup" colspan="3">Gatos</th>
+        </tr>
+        <tr>
+            <td>Siamés</td>
+            <td>Elegante.</td>
+            <td>Alta</td>
+        </tr>
+        <tr>
+            <td>Persa</td>
+            <td>Le gusta ser adorado.</td>
+            <td>Alta</td>
+        </tr>
+        <!-- ... -->
+        <tr>
+            <th scope="rowgroup" colspan="3">Perros</th>
+        </tr>
+    </table>
+
+    <br>
+
+    <table
+    >
+        <caption>tabla usando colspan y rowspan</caption>
+        <tr>
+            <th rowspan="2"  >Nombre</th>
+            <th colspan="6"  >Ciclos</th>
+        </tr>
+        <tr>
+            <th>1°</th>
+            <th>2°</th>
+            <th>3°</th>
+            <th>4°</th>
+            <th>5°</th>
+            <th>6°</th>
+        </tr>
+        <tr>
+            <th>Juan</th>
+            <td>20</td>
+            <td>12</td>
+            <td>10</td>
+            <td>19</td>
+            <td>20</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <th>Maria</th>
+            <td>10</td>
+            <td>12</td>
+            <td>10</td>
+            <td>19</td>
+            <td>20</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <th>Carlos</th>
+            <td>20</td>
+            <td>12</td>
+            <td>10</td>
+            <td>19</td>
+            <td>20</td>
+            <td>11</td>
+        </tr>
+    </table>
+    <br>
+    <table
+        style="
+            border: 1px solid black;
+            border-collapse: collapse;
+        "
+    >
+        <caption>tabla usando colspan y rowspan un poco mas complejo</caption>
+        <tr>
+            <th rowspan="2" >Oso</th>
+            <th>Leon</th>
+            <th>Tigre</th>
+        </tr>
+        <tr>
+            <th>cebra</th>
+            <th rowspan="3" >panda</th>
+        </tr>
+        <tr>
+            <th>Loro</th>
+            <th>Pato</th>
+        </tr>
+        <tr>
+            <th>Buo</th>
+            <th>Aguila</th>
+        </tr>
+    </table>   
+    
+    <br>
+
+    <table>
+        <caption>otro mas</caption>
+        <tr>
+            <td>Rojo</td>
+            <td colspan="2" >Verde</td>
+        </tr>
+        <tr>
+            <td>cafe</td>
+            <td>marron</td>
+            <td>tinto</td>
+        </tr>
+        <tr>
+            <td colspan="3">naranja</td>
+        </tr>
+        <tr>
+            <td colspan="2" >blanco</td>
+            <td>negro</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <caption>tabla con un orden usando las etiquetas thead,tbody,tfoot </caption>
+        <thead>
+            <tr>
+                <th rowspan="2" >Nombre</th>
+                <th colspan="4" >cursos</th>
+            </tr>
+            <tr>
+                <td>lenguaje</td>
+                <td>Matematica</td>
+                <td>Fisica</td>
+                <td>Quimica</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Luis</td>
+                <td>12</td>
+                <td>20</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>11</td>
+                <td>10</td>
+                <td>09</td>
+                <td>01</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>20</td>
+                <td>20</td>
+                <td>20</td>
+                <td>20</td>
+            </tr>
+
+        </tbody>
+        <tfoot
+        >
+            <tr>
+                <td colspan="2">Aprobados</td>
+                <td colspan="3" >1</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

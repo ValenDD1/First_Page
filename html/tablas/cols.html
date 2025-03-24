@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cols</h1>
+    <p>
+        Las tablas, al definirse en el código siguiendo una estructura horizontal, como por ejempo con las etiquetas tr, hacen que resulte complejo el aplicar o realizar una serie de cambios exclusivamente a una columna.
+
+        Aunque esto podría hacerse también con CSS, puede resultar complejo para desarrolladores que no conozcan en profundidad CSS.
+
+    </p>
+    <ul>
+        <li>coulgroup: Etiqueta contenedora de columnas. Crea una agrupación de columnas. </li>
+        <li>col: Etiqueta que representa a una columna de la tabla. </li>
+    </ul>
+
+    ejemplo:
+
+    <table>
+        <caption>tabla con el colgroup y col</caption>
+        <colgroup>
+            <col span="1" style="background-color: rgb(174, 136, 136);"  >
+            <col style="background-color: rgb(131, 221, 135);"  >
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>valentino</td>
+                <td>es muy inteligente</td>
+            </tr>
+            <tr>
+                <td>perez</td>
+                <td>es muy sociable</td>
+            </tr>
+        </tbody>
+    
+    </table>
+
+    ojo:tambien se puede hacer con CSS pero es mas avanzado que con el colgroup
+
+    <p>
+        tbody td:nth-child(1) { background: rgb(174, 136, 136); }
+        tbody td:nth-child(2) { background: rgb(174, 136, 136); }
+    </p>
+
+
+
+
+</body>
+</html>
