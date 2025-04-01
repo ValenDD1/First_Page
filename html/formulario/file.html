@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+        text-decoration: none;
+    }
+    .aprender-mas{
+        border: 1px solid #aaa;
+        border-radius: 4px;                               
+        padding: 0.5em 0.5em 0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>File</h1>
+        <p>
+            el atributo type="file" nos permite abrir nuestro fichero de archivos y poder seleccionar,esto nos sirve para poder enviar archivos una base de datos.
+        </p>
+    </header>
+    <main>
+        <article>
+            <p>para entener algunas cosas del file debemos saber que por defecto se envia "application/x-www-form-urlencoded"</p>
+            <p>pero hay varias formas de mandar un archivo</p>
+            <ul>
+                <li>application/x-www-form-urlencoded</li>
+                <li>multipart/form-data es la mas recomendable</li>
+                <li>text/plain Sólo se envía texto plano. No se suele utilizar hoy en día.</li>
+            </ul>
+            tambien los atributos que usa
+            <ul>
+                <li>accept: Indica los tipos de archivos que se pueden subir (image,application,audio,video)</li>
+                <li>accept-charset: Fuerza a utilizar una codificación en los parámetros de texto del formulario.</li>
+                <li>capture: Indica si el usuario puede capturar un archivo desde su dispositivo. (solo en celulares)</li>
+                <li>para form enctype:{"multipart/form-data","application/x-www-form-urlencoded"} ,nos sirve para enviar el archivo y que formato  </li>
+            </ul>
+        </article>
+        <article>
+            <h3>ejemplo</h3>
+            <section>
+                <h5>ejemplo de un input file</h5>
+                <form method="post" action="/send" enctype="multipart/form-data">
+                    <input type="file" name="file" id="archivo1">
+                </form>
+            </section>
+            <section>
+                <h5>ejemplo de un input que solo se puede enviar videos y audios</h5>
+                <form method="post" action="/send" enctype="multipart/form-data">
+                    <input type="file" name="file2" id="archivo2" accept="video/*,audio/*">
+                </form>
+            </section>
+            <section>
+                <h5>fichero multiple</h5>
+                <form action="/send" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file3" id="archivo3" multiple>
+                </form>
+            </section>
+            <section>
+                <h5>capturar un archivo</h5>
+                <form action="/send" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file4" id="archivo4" capture="user">
+                    <input type="file" name="file5" id="archivo5" capture="environment" >
+                </form>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de File</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-file/">Input File con Manzdev</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">file con mozilla</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/captureI">capture con mozilla</a>
+                <br>
+            </nav>
+        </details>
+    </footer>
+</body>
+</html>

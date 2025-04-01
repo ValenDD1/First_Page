@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header>h1{
+            text-align: center;
+        }
+        li>strong{
+            color: darkturquoise;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+        section{
+            border: 1px solid rgb(65, 64, 64);
+            border-radius: 10px;
+            background-color: aquamarine;
+            margin: 10px;
+            padding: 10px;
+        }
+        .checkbox-custom{
+            --size: 20px;
+            --color: #8b1515;
+
+            appearance: none;
+            width: var(--size);
+            height: var(--size);
+            border: 2px solid var(--color);
+            border-radius: 6px;
+            box-shadow: 0 0 0 6px field inset;
+
+            &:checked {
+                background: var(--color);
+            }
+        }
+        .radio-custom{
+            --size: 20px;
+            --color: #2d2db7;
+
+            appearance: none;
+            width: var(--size);
+            height: var(--size);
+            border: 2px solid var(--color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px field inset;
+
+            &:checked {
+                background: var(--color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>casillas</h1>
+        <p>
+            es un valor del input que nos permitira que el usuario pueda elegir una o varias opciones mediante una casilla 
+        </p>
+        <ul>
+            <li><strong>checkbox:</strong> Este tipo de control permite mostrar una casilla al usuario, dándole la posibilidad de marcarlo como activado o desactivado.</li>
+            <li><strong>radio:</strong> Este tipo de control se suele utilizar cuando el usuario debe elegir sólo una opción específica de varias disponibles.</li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2>checkbox</h2>
+            <p>ejemplos de como usar el checkbox</p>
+            <ul>
+                <li>
+                    <p>primer ejemplo</p>
+                    <input type="checkbox" name="dame click">
+                    dame click
+                </li>
+                <li>
+                    <p>atributo checked</p>
+                    <input type="checkbox" name="pepe" checked>
+                    ya es checkeado
+                </li>
+                <li>
+                    <p>atributo disabled</p>
+                    <input type="checkbox" name="pepe" disabled>
+                    ya es desactivado
+                </li>
+                <li>
+                    <p>css</p>
+                    <input type="checkbox" name="pepe" checked style="accent-color: rgb(214, 92, 92) ;">
+                    con estilo mediante accent-color
+                    
+                </li>
+                <li>
+                    <p>css personalizado</p>    
+                    <input type="checkbox" checked class="checkbox-custom" >
+                    un css mas personalizado
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>radio</h2>
+            <p>ejemplos de como usar el radio</p>
+            <ul>
+                <li>
+                    <p>primer ejemplo</p>
+                    <input type="radio" name="pepe" >
+                    pepe
+                </li>
+                <li>
+                    <p>atributo checked</p>
+                    <input type="radio" name="pepe" checked>
+                    pepe
+                </li>
+                <li>
+                    <p>atributo disabled</p>
+                    <input type="radio" name="pepe" disabled>
+                    pepe
+                </li>
+                <li>
+                    <p>css</p>
+                    <input type="radio" name="pepe" checked style="accent-color: rgb(214, 92, 92) ;">
+                    con estilo mediante accent-color
+                </li>
+                <li>
+                    <p>css personalizado</p>    
+                    <input type="radio" name="pepe"  checked class="radio-custom" >
+                    un css mas personalizado
+                </li>
+        </section>
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de casillas</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-checkbox-radio/">casillas con Manzdev</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">checkbox con mozilla</a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=BQSNBa3gZJU&list=PL5e68lK9hEzcX9IXF7uXtRAq03EwHIP1x">css de checkboxes</a>
+                <br>
+            </nav>
+        </details>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button-custom{
+            --color: #1283d1;
+            --dark-color: color-mix(in srgb, var(--color), black 20%);
+            --gradient-color: linear-gradient(var(--dark-color), var(--color));
+            --darker-gradient: linear-gradient(to bottom, #0006, #0008);
+            --border-color: var(--dark-color);
+
+            display: flex;
+            place-items: center;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem;
+            border: 0;
+
+            font-family: Montserrat, sans-serif;
+            text-shadow: 0 0 6px #0007;
+            font-size: 1rem;
+            color: #eee;
+
+            background: var(--gradient-color);
+            box-shadow:
+                0 7px 0 var(--border-color),
+                0 8px 3px #0004;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .button-custom:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 5px 0 var(--border-color),
+                0 6px 3px #0004;
+            cursor: ne-resize;
+        }
+        .button-custom:active {
+            transform: translateY(2px);
+            box-shadow:
+                0 3px 0 var(--border-color),
+                0 4px 3px #0004;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button</h1>
+    <p>un boton como mismo lo dice,nos sirve para enviar un formulario u otra cosa que nosotros pongamos</p>
+    ejemplos:
+    <button>enviar</button>
+    <br>
+    <button>borrar</button>
+    <br>
+    <button disabled style="cursor: not-allowed;" >desactivado</button>
+    <br>
+    boton con js
+    <br>
+    <button onclick="alert('hola mundo')" >hola</button>
+    <br>
+    boton con css intenso
+    <button class="button-custom">
+        enviar
+    </button>
+</body>
+
+<a href="https://lenguajehtml.com/html/validaciones/que-son-validaciones/">validaciones y lo restante de los formularios con manzdev</a>
+</html>

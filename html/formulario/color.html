@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-custom{
+            --size: 25px;
+            width: var(--size);
+            height: var(--size);
+            background: none;
+            padding: 0;
+            border: 0;
+        }
+        .color-custom::-webkit-color-swatch-wrapper{
+            width: var(--size);
+            height: var(--size);
+            padding: 0;
+        }
+        .color-custom::-webkit-color-swatch{
+            border: 3px solid #333;
+            border-radius: 50%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Color</h1>
+        <p>color es un valor del atributo tyoe de input y solo sirve para poder ver un color en un pagina web</p>
+    </header>
+    <main>
+        <p>
+            para usarlo debemos usar el atributo type="color"
+        </p>
+        <p>
+            para personalizarlo debemos usar los pseudoelementos especiales de css 
+        </p>
+        <ul>
+            <li>input[type="color"] : Elemento de entrada de datos para elegir color.</li>
+            <li>::color-swatch-wrapper :Contenedor externo del color elegido.</li>
+            <li>::color-swatch :Contenedor interno del color elegido.</li>
+        </ul>
+        <input type="color">
+
+        <fieldset>
+            <legend>color sin personalizar</legend>
+            <input type="color" value="#732FB6">
+        </fieldset>
+
+        <fieldset >
+            <legend>color personalizado</legend>
+            <input type="color" class="color-custom" value="#732FB6">
+        </fieldset>
+
+    </main>
+    <footer>
+
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de color</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-color/">color con Manzdev</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color">color con mozilla</a>
+                <br> 
+            </nav>
+        </details>
+    </footer>
+</body>
+</html>

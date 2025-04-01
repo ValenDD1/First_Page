@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header>h1{
+            text-align: center;
+        }
+        .select-custom{
+            width: 200px;
+            height: 30px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            color: #333;
+            padding: 0 6px;
+            margin: 10px 0;
+        }
+        .select-custom:open{
+            background-color: rgb(14, 16, 15);
+            color: white;
+        }
+        .select-custom::picker(select){
+            appearance: base-select;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>etiqueta-select</h1>
+        <p>
+            La etiqueta select se utiliza para crear un menu desplegable
+        </p>
+    </header>
+    <main>
+        <article>
+            <h3>algunos ejemplos de select</h3> 
+            <p>cosas a saber</p>
+            <ul>
+                <li>select : es un atributo que nos ayuda a que seleccione una opcion por defecto</li>
+                <li>disabled : es un atributo que nos ayuda a desactivar el select o una opcion</li>
+                
+            </ul>
+            <section>
+                <p>select normal</p>
+                <select name="" id="">
+                    <option value="1">opcion 1</option>
+                    <option value="2">opcion 2</option>
+                    <option value="3">opcion 3</option>
+                    <option value="4">opcion 4</option>
+                    <option value="5">opcion 5</option>
+                </select>
+            </section>
+            <section>
+                <p>select desactivado</p>
+                <select name="" id="" disabled="disabled">
+                    <option value="01">opcion 01</option>
+                    <option value="02">opcion 02</option>
+                </select>
+            </section>
+            <section>
+                <p>select multiple</p>
+                <select name="" id="" multiple="multiple">
+                    <option value="">opcion 4</option>
+                    <option value="">opcion 5</option>
+                    <option value="">opcion 6</option>
+                    <option value="">opcion 7</option>
+                    <option value="">opcion 8</option>
+                </select>
+            </section>
+            <section>
+                <p>select con size</p>
+                <select size="3">
+                    <option value="">opcion 4</option>
+                    <option value="">opcion 5</option>
+                    <option value="">opcion 6</option>
+                    <option value="">opcion 7</option>
+                    <option value="">opcion 8</option>
+                </select>
+            </section>
+            <section>
+                <p>select con optgroup</p>
+                <select name="" id="">
+                    <optgroup label="grupo 1">
+                        <option value="">opcion 1</option>
+                        <option value="">opcion 2</option>
+                        <option value="">opcion 3</option>
+                    </optgroup>
+                    <optgroup label="grupo 2">
+                        <option value="">opcion 4</option>
+                        <option selected>opcion 5</option>
+                        <option value="">opcion 6</option>
+                    </optgroup>
+                </select>
+            </section>
+            <section>
+                <p>select personalizado</p>
+                <select class="select-custom" >
+                    <option value="">opcion 1</option>
+                    <option value="">opcion 2</option>
+                    <option value="">opcion 3</option>
+                    <option value="">opcion 4</option>
+                    <option value="">opcion 5</option>
+                    <option value="">opcion 6</option>
+                    <option value="">opcion 7</option>
+                    <option value="">opcion 8</option>
+                </select>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de select</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-select/">select con Manzdev</a>
+                <br>
+                <a href="https://lenguajehtml.com/html/formularios/personalizar-etiqueta-select/">personalizacion de select con Manzdev</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select en mozilla</a>
+                <br>
+        </details>
+    </footer>
+</body>
+</html>

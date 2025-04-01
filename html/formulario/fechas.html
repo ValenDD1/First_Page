@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+        ul>li>strong{
+            color: red;
+        }
+        header>h1{
+            text-align: center;
+        }
+        main>section{
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: aquamarine;
+            margin: 10px;
+            padding: 10px;
+        }
+        .date-custom{
+            --color: red;
+            border: 2px solid var(--color);
+            font-size: 1.1rem;
+            background: #000d;
+            color: #fff;
+            padding: 6px;
+            border-radius: 6px;
+        }
+        .date-custom::-webkit-datetime-edit{
+            margin-right: 0.5rem;
+        }
+        .date-custom:-webkit-datetime-edit-fields-wrapper {
+            background: #000;
+            border-radius: 8px;
+            padding: 4px 10px;
+        }
+        .date-custom::-webkit-datetime-edit-text {
+            color: rgb(30, 165, 44);
+        }
+        .date-custom::-webkit-datetime-edit-day-field:focus,
+        .date-custom::-webkit-datetime-edit-month-field:focus,
+        .date-custom::-webkit-datetime-edit-year-field:focus {
+            background: indigo;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+        }
+        .date-custom::-webkit-calendar-picker-indicator {
+            filter:invert(1);
+            
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <header>
+        <h1>fechas</h1>
+        <p>
+            Si nuestra intención es que el usuario introduzca una fecha concreta, en lugar de utilizar un campo de texto genérico <b>input</b>, lo ideal sería utilizar uno relacionado con las fechas, que desplegará un control denominado frecuentemente date picker.
+        </p>
+    </header>
+    
+    <main>
+        <section>
+            <p>existe varios tipos de fechas aqui algunos ejemplos</p>
+            <ul>
+                <li>fecha: <input type="date">  </li>
+                <li>mes: <input type="month"></li>
+                <li>semana: <input type="week"> </li>
+                <li>hora: <input type="time"> </li>
+                <li>fecha y hora: <input type="datetime-local"></li>
+            </ul>
+        </section>
+        <section>
+            <p>tambien podemos poner,max,min,step,disabled y value</p>
+            <ul>
+                <li>fecha: <input  type="date" value="2024-09-22" min="2024-02-25" max="2024-12-25" step="2" > </li>
+                <li>mes: <input type="month" value="2024-09" min="2024-02" max="2024-12" ></li>
+                <li>semana: <input type="week" value="2024-W11 min="2024-W13" max="2024-W36" step="2"></li>
+                <li>hora: <input type="time" value="23:00" min="09:00" max="22:00" step="30"></li>
+                <li>fecha y hora: <input type="datetime-local" value="2024-07-23T11:00" min="2024-03-23T11:00" max="2024-11-23T11:00" step="3600" ></li>
+            </ul>
+            <p>disabled</p>
+            <ul>
+                <li>fecha: <input type="date" disabled>  </li>
+                <li>mes: <input type="month" disabled ></li>
+                <li>semana: <input type="week" disabled> </li>
+                <li>hora: <input type="time" disabled> </li>
+                <li>fecha y hora: <input type="datetime-local" disabled></li>
+            </ul>
+
+        </section>
+        <section>
+            <h3>personaliza con css</h3>
+            <ul>
+                <li><strong>input[type="date"]</strong> El campo de entrada de fecha.</li>
+                <li><strong>::datetime-edit</strong> Elemento exterior contenedor de fecha y botón del date picker.</li>
+                <li><strong>::datetime-edit-fields-wrapper</strong> Elemento contenedor del grupo de campos de fecha.</li>
+                <li><strong>::datetime-edit-text</strong> Elemento contenedor de los separadores / de fecha.</li>
+                <li><strong>::datetime-edit-day-field</strong> Elemento contenedor del campo día de la fecha.</li>
+                <li><strong>::datetime-edit-month-field</strong> Elemento contenedor del campo mes de la fecha.</li>
+                <li><strong>::datetime-edit-year-field</strong> Elemento contenedor del campo año de la fecha.</li>
+                <li><strong>::calendar-picker-indicator</strong> Elemento contenedor del icono del date picker.</li>
+            </ul>
+            ejemplo:
+            <input type="date" class="date-custom" >
+            
+        </section>
+    </main>
+    
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de fechas</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-fechas/">fechas con Manzdev</a>
+                <br>
+            </nav>
+        </details>
+
+    </footer>
+
+</body>
+</html>

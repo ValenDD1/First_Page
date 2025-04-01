@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>submit</h1>
+    <p>
+        La etiqueta <submit>submit</submit> se utiliza para enviar un formulario al servidor
+    </p>
+
+    <section>
+        <h3>ejemplos</h3>
+        <form action="/send" method="post" >
+            <fieldset>
+                <legend>Input simple</legend>
+                <label for="name">name</label>
+                <input type="text" name="name" id="name" required >
+                <input type="submit" value="enviar" >
+            </fieldset>
+        </form>
+        <form action="">
+            <fieldset>
+                <legend>Input imagen</legend>
+                <label for="name2">name</label>
+                <input type="text" name="name2" id="name2" required >
+                <input type="image" src="/images/perrito.jpg" height="24" value="enviar" >
+            </fieldset>
+        </form>
+        <form action="">
+            <fieldset>
+                <legend>Input Button </legend>
+                <label for="name3">name</label>
+                <input type="text" name="name3" id="name3" required >
+                <input type="button" value="enviar" >
+            </fieldset>
+        </form>
+        <form action="">
+            <fieldset>
+                <legend>Input reset </legend>
+                <label for="name4">name</label>
+                <input type="text" name="name4" id="name4" required >
+                <input type="reset" value="limpiar">
+                <input type="submit" value="enviar">
+            </fieldset>
+        </form>
+    </section>
+
+    <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+    <details class="aprender-mas" >
+        <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de submit</summary>
+        <nav style=" text-align: center; font-size: 17px;" >
+            <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-submit/">submit con Manzdev</a>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit">submit con mozilla</a>
+            <br>
+        </nav>
+    </details>    
+
+</body>
+</html>

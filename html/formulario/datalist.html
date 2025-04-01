@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+        text-decoration: none;
+    }
+    .aprender-mas{
+        border: 1px solid #aaa;
+        border-radius: 4px;                               
+        padding: 0.5em 0.5em 0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>datalist </h1>
+        <p>
+            es un grupo de datos o tambien lista de datos en el cual podemos conectar a un input con el atributo list y poner el id de la datalist ,esto nos servira para poder hacer que el usuario añada más opciones al input 
+        </p>
+    </header>
+    <main>
+        ejemplos de datalist
+        <article>
+            <section>
+                <p>datalist de textos</p>
+                <input type="text" list="textos">
+                <datalist id="textos">
+                    <option value="hola">como estas</option>
+                    <option value="adios">no te quiero ver</option>
+                </datalist>
+            </section>
+            <section>
+                <p>datalist de numeros</p>
+                <input type="number" list="numeros">
+                <datalist id="numeros">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </datalist>
+            </section>
+            <section>
+                <p>datalist desactivada</p>
+                <input type="text" list="desactivada" disabled="disabled">
+                <datalist id="desactivada">
+                    <option value="hola">como estas</option>
+                    <option value="adios">no te quiero ver</option>
+                </datalist>
+            </section>
+            <section>
+                <p>datalist con colores</p>
+                <input type="color" list="colores">
+                <datalist id="colores">
+                    <option value="#ff0000">rojo</option>
+                    <option value="#00ff00">verde</option>
+                    <option value="#0000ff">azul</option>
+                </datalist>
+            </section>
+            <section>
+                <p>datalist con fechas</p>
+                <input type="date" list="fechas">
+                <datalist id="fechas">
+                    <option value="2024-01-01">enero 2024</option>
+                    <option value="2024-02-01">febrero 2024</option>
+                    <option value="2024-03-01">marzo 2024</option>
+                </datalist>
+            </section>
+            <section>
+                <p>datalist con meses</p>
+                <input type="month" list="meses">
+                <datalist id="meses">
+                    <option value="2024-01">enero 2024</option>
+                    <option value="2024-02">febrero 2024</option>
+                    <option value="2024-03">marzo 2024</option>
+                </datalist>
+            </section>
+            <section>
+                <p>datalist con range</p>
+                <input type="range" list="ranges" min="1" max="4" value="2" >
+                <output></output>
+                <datalist id="ranges">
+                    <option value="1">excelente</option>
+                    <option value="2">mazo</option>
+                    <option value="3">bueno</option>
+                    <option value="4">malo</option>
+                </datalist>
+            </section>
+            
+        </article>
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de datalist</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-datalist/">datalist con Manzdev</a>
+                <br>
+            </nav>
+        </details>
+    </footer>
+    <script>
+        const input = document.querySelector("input");
+        const options = document.querySelectorAll("#ranges option");
+        const output = document.querySelector("output");
+
+        function updateOutput() {
+            output.value = options[input.value - 1].textContent;
+        }
+
+        input.addEventListener("input", () => updateOutput());
+        updateOutput();
+    </script>
+
+</body>
+</html>

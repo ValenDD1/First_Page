@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Organizar nuestros campos de formulario </h1>
+        <p>
+            Hasta ahora, nos hemos enfocado en conocer como funcionan campos concretos del formulario para obtener información determinada. Sin embargo, una buena práctica sería aprender y entender como funcionan ciertas etiquetas que sirven para organizar la información, tanto visualmente como semánticamente.
+        </p>
+        
+    </header>
+    <main>
+        <article>
+            <h3>etiquetas para usar en los formularios</h3>
+            <ul>
+                <li>fieldset: Agrupación visual o temática de campos de entrada</li>
+                <li>legend: Etiqueta que describe el campo </li>
+                <li> label: Etiqueta que es relacion de campo y texto </li>
+            </ul>
+            <p>teniendo esto en cuenta,mostraremos algunos ejemplos</p>
+        </article>
+        <article>
+            <h3>ejemplos</h3>
+            <section>
+                <h5>ejemplo de un fieldset</h5>
+                <form action="color.html">
+                    <fieldset>  
+                        escribe algo
+                        <br>
+                        <input type="text" name="" id="">
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <h5>ejemplo de un legend </h5>
+                <form action="">
+                    <fieldset>
+                        <legend>Formulario</legend>
+                        <p>ingresa tus datos</p>
+                        <input type="text" placeholder="nombre"><br>
+                        <input type="tel" placeholder="telefono" ><br>
+                        <input type="text" placeholder="direccion"><br>
+                        <input type="email" placeholder="correo"><br>
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <h5>ejemplo de un label</h5>
+                <form action="">
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name">
+                </form>
+            </section>
+            <section>
+                <h5>ejemplo de lo aprendido pero con css</h5>
+                <form action="">
+                    <fieldset
+                        style="border: 4px solid #000;
+                        border-radius: 15px;
+                        margin: 1rem;"
+                    >
+                        <legend 
+                            style="font-family: Jost, sans-serif;
+                            font-size: 1.25rem;
+                            text-align: center;
+                            padding: 0 1rem;"
+                        >Formulario</legend>
+                        <p>ingresa tus datos</p>
+                        <label for="name2">name</label>
+                        <input type="text" placeholder="name" id="name2"><br>
+                        <label for="telefono">telefono</label>
+                        <input type="tel" placeholder="telefono" id="telefono"><br>
+                        <label for="direccion">direccion</label>
+                        <input type="text" placeholder="direccion" id="direccion"><br>
+                        <label for="correo">correo</label>
+                        <input type="email" placeholder="correo" id="correo"><br>
+                    </fieldset>
+                    
+                </form>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de fieldset,legend y label</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/organizacion-de-campos/">fieldset,legend y label con Manzdev</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset con mozilla</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label con mozilla</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend con mozilla</a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=E56I3HcAcbY">legend,fieldset en 4 min</a>
+            </nav>
+        </details>
+
+    </footer>
+</body>
+</html>

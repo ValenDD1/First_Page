@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>li>strong{
+            color: red;
+        }
+        article>section{
+            color: white;  
+            background: #6a6060;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #2d2a2a;
+        }
+        .number-custom{
+            height: 40px;
+            background: #333;
+            border: 3px solid gold;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            outline: none;
+        }
+        .number-custom::-webkit-textfield-decoration-container{
+            background: #333;
+            padding: 0.5rem 1rem;
+        }
+        .number-custom::-webkit-inner-spin-button{
+            background: linear-gradient(green 49%, transparent 49% 51%, red 51%);
+            appearance: none;
+            box-shadow: 0 0 5px 3px #000 inset;
+            opacity: 1;
+            width: 20px;
+            height: 25px;
+        }
+        .range-custom{
+            appearance: none;
+            margin: 1rem 0;
+        }
+        .range-custom::-webkit-slider-runnable-track{
+            background: none;
+        }
+        .range-custom::-webkit-slider-container{
+            background: darkred;
+            box-shadow: 0 0 4px #0006 inset;
+            border: 1px solid #000;
+            height: 8px;
+        }
+        .range-custom::-webkit-slider-thumb{
+            appearance: none;
+            width: 18px;
+            height: 32px;
+            box-shadow: 0 0 4px #0006;
+            background: conic-gradient(#222, #888, #444, #222);
+            border-radius: 16px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>numbers</h1>
+        <p>
+            en la etiqueta input tenemos el type=number y range,eto 
+        </p>
+        <ul>
+            <li><strong>number</strong>: se podra poner numeros,+,. e incluso se puede autoincrementar</li>
+            <li><strong>range</strong>:un slider que se puede mover de un minimo a un maximo</li>
+        </ul>
+    </header>
+    <main>
+        ejemplos
+        <article>
+            
+            <section>
+                <h2>ejemplos basicos de numero y rango</h2>
+                <p>primer ejemplo de un input con el type number</p>
+                <label for="">numero</label>
+                <br>
+                <input type="number">
+                <p>segundo ejemplo de un input con el type range</p>
+                <label for="">rango</label>
+                <br>
+                <input type="range" >
+            </section>
+            <section>
+                <h2>acerca del number</h2>
+                <br>
+                <input type="number" value="34.5" >
+                <br>
+                <label for="">Min y Max</label>
+                <input type="number" min="0" max="30" >
+                <br>
+                <label for="">step</label>
+                <input type="number" step="2">
+                <br>
+                <label for="">readonly</label>
+                <input type="number" value="34.5" readonly>
+                <br>
+                <label for="">disabled</label>
+                <input type="number" value="34.5" disabled>
+                <br>
+                <div>
+                    tambien podemos ponerle css y cambiar los elementos por defecto
+                    <ul>
+                        <li><strong>input[type="number"]</strong> Elemento de entrada de datos numéricos vía campo de texto.</li>
+                        <li><strong>::textfield-decoration-container</strong> Contenedor específico de la información numérica.</li>
+                        <li><strong>::inner-spin-button</strong> Contenedor del botón pulsable para cambiar números.</li>
+                    </ul>
+                    ejemplo:
+                    <input type="number">
+                    <input type="number" class="number-custom" >
+                </div>
+            </section>
+            <section>
+                <h2>acerca de range</h2>
+                <br>
+                <label for="">valor</label>
+                <input type="range" value="10" onInput="this.nextElementSibling.value = this.value" >
+                <output>10</output>
+                <br>
+                <label for="">rango con min y max</label>
+                <input type="range" min="0" max="30" onInput="this.nextElementSibling.value = this.value"  >
+                <output>0</output>
+                <br>
+                <label for="">step</label>
+                <input type="range" step="5" onInput="this.nextElementSibling.value = this.value" >
+                <output>5</output>
+                <br>
+                <label for="">disabled</label>
+                <input type="range" disabled>
+                <div>
+                    tambien podemos ponerle css y cambiar los elementos por defecto
+                    <ul>
+                        <li><strong>input[type="range"]</strong> Elemento de tipo slider para representar números.</li>
+                        <li><strong>::slider-runnable-track</strong> Contenedor de toda la banda del slider.</li>
+                        <li><strong>::slider-container</strong> Contenedor interno de la banda del slider.</li>
+                        li><strong>::slider-thumb</strong> Contenedor del nodo de selección del slider.</li>
+                    </ul>
+                    ejemplo:
+                    <input type="range">
+                    <input type="range" class="range-custom" >
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de numeros</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                
+                <br>
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-numeros/">numeros con Manzdev</a>
+                <br>
+                <br>
+            </nav>
+        </details>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Progress</h1>
+    <p>
+        existen algunos controles que, aunque no nos permiten introducir información, pueden ser muy útiles en formularios para presentar información de una forma más visual y ofrecer información específica al usuario.
+    </p>
+    ejemplo:
+    <progress></progress>
+
+    <ul>
+        atributos 
+        <li>value: al indicarle un valor numerico ,este se mostrara en la barra de progreso pero inmovil</li>
+        <li>max: indicara el maximo de la barra de progreso</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <section>
+        ejemplos
+        <progress value="20" max="100" >20%</progress>
+        <progress value="10">100%</progress>
+
+        <p>ejemplo  de un progress que se autoincrementa </p>
+        <progress value="0" max="100" id="barra" ></progress>
+    </section>
+
+    <script>
+        const barra=document.getElementById("barra");
+        const tiempo=500;
+
+        function increment(){
+            barra.value+=10;
+            if (barra.value<100) {
+                setTimeout(increment,tiempo);
+            }
+        }
+        setTimeout(increment,tiempo);
+    </script>
+</body>
+
+</html>

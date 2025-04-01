@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .primero section{
+            border: 2px green solid;
+            margin: 10px;
+            padding: 10px;
+        }
+        .custom{
+            height: 40px;
+            background: #000;
+            border: 3px solid gold;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        .custom::-webkit-textfield-decoration-container{
+            background: #000;
+            padding: 0.5rem 1rem; ; 
+        }
+        .custom::-webkit-search-cancel-button{
+            filter: drop-shadow(0 0 1px white) drop-shadow(0 0 5px white);
+
+        }
+        .custom:focus{
+            outline: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .aprender-mas{
+            border: 1px solid #aaa;
+            border-radius: 4px;                               
+            padding: 0.5em 0.5em 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Form</h1>
+
+        <p>¿que es?:</p>
+
+        <p>
+            sirve para enviar información por parte del usuario, a través de unos campos visuales de forma sencilla e intuitiva, que determinan la naturaleza del tipo de información que se va a enviar y como hacerla llegar a otro extremo donde se procesará esa información.
+        </p>
+    </header>
+    
+    <main>
+        
+        <section>
+            atributos de un form
+            <ul>
+                <li>action: Dirección URL del backend al cuál se enviará la información obtenida en el formulario.</li>
+                <li>method: Método HTTP de envío. GET a través de URL, POST para envío extenso de información.</li>
+                <li>name: Nombre del formulario. Útil para identificar el formulario y procesar posteriormente.</li>
+                <li>target: Nombre del lugar donde se abrirá el formulario. \_blank para nueva pestaña.</li>
+                <li>enctype: Codificación para el envío del formulario. Importante para envío de archivos.</li>
+                <li>accept-charset: Fuerza a utilizar una codificación en los parámetros de texto del formulario.</li>
+                <li>autocomplete: Activa on o desactiva off el autocompletado para todos los campos del formulario.</li>
+                <li>novalidate: Desactiva la validación HTML5 del formulario.(true o false)</li>
+            </ul>
+
+        </section>
+
+        <h1>Input</h1>
+        <p>
+            sirve para obtener datos a través del usuario. No es la única, pero si es la que permite obtener información en multitud de formas diferentes, según la naturaleza del dato a obtener.
+        </p>
+
+        <ul type="square" >
+            tiene varios atributos:
+            <li><strong style="color:red">name</strong>:Indica el nombre del campo. Útil para hacer referencia a la información almacenada.</li>
+            <li><strong style="color:red">type</strong>:Indica la naturaleza de datos que se espera del usuario (texto, número, fechas, etc...).</li>
+            <li><strong style="color:red">value</strong>:Indica el valor inicial que tendrá este campo de datos. Si se omite, está vacío.</li>
+            <li><strong style="color:red">form</strong>:Asocia este campo con un formulario específico. Útil si necesitamos tenerlo fuera del <b>form</b>.</li>
+            <li><strong style="color:red">list</strong>:En algunos <b>input</b> permite combinar con otra etiqueta para personalizarla. Lo veremos más adelante.</li>
+            <li><strong style="color:red">placeholder</strong>:Indica una sugerencia al usuario antes de escribir el valor en el campo.</li>
+            <li><strong style="color:red">size</strong>:Tamaño visual (aprox: número de carácteres) del campo de datos.</li>
+            <li><strong style="color:red">autocomplete</strong>:Activa on o desactiva off el autocompletado para este campo. Activado por defecto.</li>
+            <li><strong style="color:red">autofocus</strong>:Establece el foco (coloca el cursor) en este campo al cargar la página.</li>
+            <li><strong style="color:red">spellcheck</strong>:Activa on o desactiva off la comprobación ortográfica.</li>
+        </ul>
+
+        <article class="primero" >
+            <h1>ejemplos</h1>
+            
+            <section >
+                primer ejemplo de un formulario con un input ,tiene  algunos atributos para que funcione de manera diferente
+                <form autocomplete="off" action="/send" method="post" >
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name" required >
+                    <input type="submit" value="enviar" >
+                </form>
+            </section>
+
+            <section  >
+                <h4>ahora ejemplos con cada uno de lo atributos del input</h4>
+                <form action="">
+
+                    <label >name</label>
+                    <input type="text" name="name" >
+                    <br>
+                    <label for="">value</label>
+                    <input type="text" value="hola soy un value">
+                    <br>
+                    <label for="">placeholder</label>
+                    <input type="text" placeholder="hola soy un placeholder">
+                    <br>
+                    <label for="">autocomplete</label>
+                    <br>
+                    <label for="">off</label>
+                    <input type="text" autocomplete="off">
+                    <label for="">on</label>
+                    <input type="text" autocomplete="on" >
+                    <br>
+                    <div>
+                        <h4>en type hay varios,hablaremos los mas usados</h4>
+                        <ul>
+                            <li>
+                                <label for="">texto</label>
+                                <input type="text" >
+                            </li>
+                            <li>
+                                <label for="">search</label>
+                                <input type="search">
+                            </li>
+                            <li>
+                                <label for="">telefono</label>
+                                <input type="tel">
+                            </li>
+                            <li>
+                                <label for="">url</label>
+                                <input type="url" >
+                            </li>
+                            <li>
+                                <label for="">email</label>
+                                <input type="email" >
+                            </li>
+                            <li>
+                                <label for="">contraseña</label>
+                                <input type="password">
+                            </li>
+                            <li>
+                                <label for="">hidden</label>
+                                <input type="hidden">
+                            </li>
+                            <li>
+                                <label for="">textarea</label>
+                                <textarea title="textarea" placeholder="escribe"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <label for="">spellcheck</label>
+                    <input spellcheck="true">
+                    <input spellcheck="false">
+                </form>
+
+
+            </section>
+
+            <section >
+                <h3>diseño con css</h3>
+                <p>
+                    Estilar los campos <input> de texto es una tarea bastante sencilla que puede hacerse utilizando propiedades habituales de CSS como width, height, border, background, font-family u otras. La única excepción en este tipo de campos de texto, es el caso de input[type="search"], donde observarás que cuando escribes en el campo de datos, aparece un botón para limpiar el texto. También se puede personalizar.
+                </p>
+                <ul>
+                    <li>input[type="search"]</li>
+                    <li>::textfield-decoration-container</li>
+                    <li>::search-cancel button</li>
+                </ul>
+                ejemplo:
+                <br>
+                <br>
+                <input type="search">
+                <input type="search" class="custom">
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <h3 style="color: aqua ; text-align: center; font-size: 20px;" >Aprender mas</h3>
+        <details class="aprender-mas" >
+            <summary style="text-align: center;" >Aqui algunos links para poder aprender mas de form e input</summary>
+            <nav style=" text-align: center; font-size: 17px;" >
+                <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input/">forms e inputs con Manzdev</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">forms con mozilla</a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=QHDJSBHDaF4">forms en 4min</a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=gj-h1xJ-btA">input en 4min</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">inputs con mozilla</a>
+            </nav>
+        </details>
+    </footer>
+</body>
+</html>
